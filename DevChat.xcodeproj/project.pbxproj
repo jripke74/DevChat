@@ -62,6 +62,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		893E26B81F040EA800697EDF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				893E26B71F03EAF300697EDF /* AAPLCameraVCDelegate.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		897565E91F02CB8B00BCE3A7 = {
 			isa = PBXGroup;
 			children = (
@@ -81,10 +89,10 @@
 		897565F41F02CB8B00BCE3A7 /* DevChat */ = {
 			isa = PBXGroup;
 			children = (
+				893E26B81F040EA800697EDF /* Protocols */,
 				893E26B41F03EA0000697EDF /* View */,
 				893E26B51F03EA0A00697EDF /* Controller */,
 				897565F51F02CB8B00BCE3A7 /* AppDelegate.swift */,
-				893E26B71F03EAF300697EDF /* AAPLCameraVCDelegate.h */,
 				897565F91F02CB8B00BCE3A7 /* Main.storyboard */,
 				897565FC1F02CB8B00BCE3A7 /* Assets.xcassets */,
 				897565FE1F02CB8B00BCE3A7 /* LaunchScreen.storyboard */,

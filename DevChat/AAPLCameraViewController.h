@@ -18,5 +18,4 @@ View controller for camera interface.
 - (void)changeCamera;
 - (void)toggleMovieRecording;
 
-
 @end

@@ -32,6 +32,9 @@
                                     <constraint firstAttribute="width" constant="69" id="afa-E2-wep"/>
                                 </constraints>
                                 <state key="normal" image="camera_icon_snap"/>
+                                <connections>
+                                    <action selector="changedCameraBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o8d-qc-xij"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFD-IV-NVP">
                                 <rect key="frame" x="128.5" y="413" width="63" height="58"/>
@@ -40,6 +43,9 @@
                                     <constraint firstAttribute="height" constant="58" id="aEo-f6-Da7"/>
                                 </constraints>
                                 <state key="normal" image="createsnap_btn"/>
+                                <connections>
+                                    <action selector="recordBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FUb-Mh-WQH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,12 +61,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraBtn" destination="gXc-Fx-l1o" id="XRn-vE-PYe"/>
                         <outlet property="previewView" destination="GTW-ZR-aYn" id="2sb-QA-76e"/>
+                        <outlet property="recordBtn" destination="lFD-IV-NVP" id="6IF-0T-IJf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-144" y="103"/>
         </scene>
     </scenes>
     <resources>
