@@ -6,6 +6,8 @@
 //  Copyright © 2017 Jeff Ripke. All rights reserved.
 //
 
+let FIR_CHILD_USERS = "user"
+
 import Foundation
 import FirebaseDatabase
 
@@ -15,8 +17,13 @@ class DataService {
     static var instance: DataService {
         return _instance
     }
+    
     var mainRef: DatabaseReference {
         return Database.database().reference()
+    }
+    
+    var userRef: DatabaseReference {
+        return mainRef.child(FIR_CHILD_USERS)
     }
     
     func saveUser(uid: String) {

@@ -16,6 +16,9 @@
 		893E26C21F047B6300697EDF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E26C11F047B6300697EDF /* LoginVC.swift */; };
 		893E26C51F04832200697EDF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E26C41F04832200697EDF /* AuthService.swift */; };
 		893E26C71F055C5B00697EDF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E26C61F055C5B00697EDF /* DataService.swift */; };
+		893E26C91F05628500697EDF /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E26C81F05628500697EDF /* UsersVC.swift */; };
+		893E26CB1F05637800697EDF /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E26CA1F05637800697EDF /* UserCell.swift */; };
+		893E26CE1F056A2C00697EDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E26CD1F056A2C00697EDF /* User.swift */; };
 		897565F61F02CB8B00BCE3A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897565F51F02CB8B00BCE3A7 /* AppDelegate.swift */; };
 		897565F81F02CB8B00BCE3A7 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897565F71F02CB8B00BCE3A7 /* CameraVC.swift */; };
 		897565FB1F02CB8B00BCE3A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897565F91F02CB8B00BCE3A7 /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 		893E26C11F047B6300697EDF /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		893E26C41F04832200697EDF /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		893E26C61F055C5B00697EDF /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		893E26C81F05628500697EDF /* UsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
+		893E26CA1F05637800697EDF /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		893E26CD1F056A2C00697EDF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		897565F21F02CB8B00BCE3A7 /* DevChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		897565F51F02CB8B00BCE3A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		897565F71F02CB8B00BCE3A7 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -67,6 +73,7 @@
 				893E26AE1F03E9CD00697EDF /* AAPLCameraViewController.h */,
 				893E26AF1F03E9CD00697EDF /* AAPLCameraViewController.m */,
 				893E26BF1F04451900697EDF /* RoundedButton.swift */,
+				893E26CA1F05637800697EDF /* UserCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -78,6 +85,7 @@
 				893E26B11F03E9DF00697EDF /* AAPLPreviewView.h */,
 				897565F71F02CB8B00BCE3A7 /* CameraVC.swift */,
 				893E26C11F047B6300697EDF /* LoginVC.swift */,
+				893E26C81F05628500697EDF /* UsersVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -97,6 +105,14 @@
 				893E26C61F055C5B00697EDF /* DataService.swift */,
 			);
 			name = services;
+			sourceTree = "<group>";
+		};
+		893E26CC1F056A1200697EDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				893E26CD1F056A2C00697EDF /* User.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		897565E91F02CB8B00BCE3A7 = {
@@ -123,6 +139,7 @@
 				893E26C31F04830D00697EDF /* services */,
 				893E26B81F040EA800697EDF /* Protocols */,
 				893E26B41F03EA0000697EDF /* View */,
+				893E26CC1F056A1200697EDF /* Model */,
 				893E26B51F03EA0A00697EDF /* Controller */,
 				897565F51F02CB8B00BCE3A7 /* AppDelegate.swift */,
 				897565F91F02CB8B00BCE3A7 /* Main.storyboard */,
@@ -279,13 +296,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				893E26C71F055C5B00697EDF /* DataService.swift in Sources */,
+				893E26C91F05628500697EDF /* UsersVC.swift in Sources */,
 				897565F81F02CB8B00BCE3A7 /* CameraVC.swift in Sources */,
 				893E26C01F04451900697EDF /* RoundedButton.swift in Sources */,
 				893E26C21F047B6300697EDF /* LoginVC.swift in Sources */,
 				897565F61F02CB8B00BCE3A7 /* AppDelegate.swift in Sources */,
 				893E26BE1F043DB900697EDF /* RoundTextField.swift in Sources */,
 				893E26B01F03E9CD00697EDF /* AAPLCameraViewController.m in Sources */,
+				893E26CE1F056A2C00697EDF /* User.swift in Sources */,
 				893E26B31F03E9DF00697EDF /* AAPLPreviewView.m in Sources */,
+				893E26CB1F05637800697EDF /* UserCell.swift in Sources */,
 				893E26C51F04832200697EDF /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
