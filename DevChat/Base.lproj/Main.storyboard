@@ -64,16 +64,17 @@
                         <outlet property="cameraBtn" destination="gXc-Fx-l1o" id="XRn-vE-PYe"/>
                         <outlet property="previewView" destination="GTW-ZR-aYn" id="2sb-QA-76e"/>
                         <outlet property="recordBtn" destination="lFD-IV-NVP" id="6IF-0T-IJf"/>
+                        <segue destination="k94-hT-f0y" kind="presentation" identifier="LoginVC" id="Lgz-oY-RtG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-144" y="103"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="ioM-r8-Sgr">
             <objects>
-                <viewController id="k94-hT-f0y" sceneMemberID="viewController">
+                <viewController id="k94-hT-f0y" customClass="LoginVC" customModule="DevChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rfu-kN-7bG"/>
                         <viewControllerLayoutGuide type="bottom" id="bpt-oK-rdx"/>
@@ -171,6 +172,9 @@
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="k94-hT-f0y" eventType="touchUpInside" id="DYm-7A-jVx"/>
+                                </connections>
                             </button>
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-2Y-Mte">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
@@ -197,6 +201,10 @@
                             <constraint firstItem="bpt-oK-rdx" firstAttribute="top" secondItem="Xdi-me-M6d" secondAttribute="bottom" id="ybS-Pj-elw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="dps-Ml-7b9" id="I94-JI-kv0"/>
+                        <outlet property="passwordField" destination="uyL-UN-sjb" id="0Lr-Tk-Rll"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifa-B4-UmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
