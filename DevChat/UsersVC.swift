@@ -104,11 +104,13 @@ class UsersVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     print("Error uploading video: \(err?.localizedDescription)")
                 } else {
                     let downloadURL = meta!.downloadURL()
+                    DataService.instance.sendMediaPullRequest(senderUID: Auth.auth().currentUser!.uid, sendingTo: self.selectedUsers, mediaURL: downloadURL!, textSnippet: "Coding today was LEGIT!")
                     print("Download URL: \(downloadURL)")
                     // save somewhere
-                    self.dismiss(animated: true, completion: nil)
+                    
                 }
             })
+            self.dismiss(animated: true, completion: nil)
         } else if let snap = _snapData {
             let ref = DataService.instance.imagesStorageRef.child("\(NSUUID().uuidString).jpg")
             _ = ref.putData(snap, metadata: nil, completion: { (meta:StorageMetadata?, err: Error?) in
@@ -119,6 +121,7 @@ class UsersVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     self.dismiss(animated: true, completion: nil)
                 }
             })
+            self.dismiss(animated: true, completion: nil)
         }
     }
 }
