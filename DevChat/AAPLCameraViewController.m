@@ -607,7 +607,7 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 						}
 					}
 				}];
-                 */
+                */
 			}
 			else {
                 [self.delegate snapshotFailed];
@@ -660,8 +660,8 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 	if ( success ) {
         
         [self.delegate videoRecordingComplete:outputFileURL];
-        /*
 		// Check authorization status.
+        /*
 		[PHPhotoLibrary requestAuthorization:^( PHAuthorizationStatus status ) {
 			if ( status == PHAuthorizationStatusAuthorized ) {
 				// Save the movie file to the photo library and cleanup.
