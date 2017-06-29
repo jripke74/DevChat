@@ -22,6 +22,7 @@ class CameraVC: AAPLCameraViewController, AAPLCameraVCDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        performSegue(withIdentifier: "LoginVC", sender: nil)
         guard Auth.auth().currentUser != nil else {
             performSegue(withIdentifier: "LoginVC", sender: nil)
             return
